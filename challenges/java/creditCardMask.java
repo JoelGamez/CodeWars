@@ -23,6 +23,7 @@ public class Maskify {
         if (str.length() >= 4) {
             String substring = str.substring(str.length() - 4);
             int diff = str.length() - substring.length();
+            
             for(int i = 0; i < stringArray.length ; i++){
                 if(i < diff){
                     result += "#";
@@ -32,10 +33,7 @@ public class Maskify {
             }
             return result;
         } else {
-            for(int i = 0; i < stringArray.length ; i++){
-                    result += stringArray[i];
-                }
-                return result;
+                return str;
             }
     }
 }
