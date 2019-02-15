@@ -6,3 +6,17 @@ The passed in string will only consist of alphabetical characters and spaces(' '
 Examples:
 toWeirdCase( "String" );//=> returns "StRiNg"
 toWeirdCase( "Weird string case" );//=> returns "WeIrD StRiNg CaSe" */
+
+function toWeirdCase(string){
+  let x = string.split("");
+  let y = [];
+  let z = 0;
+ for(let i=0; i<x.length;i++){
+   x[i-1]==" "?z=0:null;
+   z%2==0?y.push(x[i].toUpperCase()):y.push(x[i].toLowerCase());
+   z++;
+  }
+  return y.join("");
+}
+
+toWeirdCase("WRTsdfghgj dfg sd fg ehrfj");
