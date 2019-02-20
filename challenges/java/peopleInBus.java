@@ -13,3 +13,22 @@ The second value in the first integer array is 0, since the bus is empty in the 
 */
 
 //https://www.codewars.com/kata/number-of-people-in-the-bus/train/java
+
+
+import java.util.ArrayList;
+
+public class Metro {
+    static int peopleEnter;
+    static int peopleExit;
+    static int finalAmount;
+
+    public static int countPassengers(ArrayList<int[]> stops) {
+        finalAmount = 0;
+        for(int[] change : stops ){
+            peopleEnter = change[0];
+            peopleExit = change[1];
+            finalAmount += peopleEnter - peopleExit;
+        }
+        return finalAmount;
+    }   
+}
