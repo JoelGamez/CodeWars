@@ -11,3 +11,5 @@ Please keep in mind that the test cases ensure that the number of people in the 
 
 The second value in the first integer array is 0, since the bus is empty in the first bus stop.
 */
+
+//https://www.codewars.com/kata/number-of-people-in-the-bus/train/java
