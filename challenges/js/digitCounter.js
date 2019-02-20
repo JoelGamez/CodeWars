@@ -11,3 +11,16 @@ nb_dig(25, 1):
 the numbers of interest are
 1, 4, 9, 10, 11, 12, 13, 14, 19, 21 which squared are 1, 16, 81, 100, 121, 144, 169, 196, 361, 441
 so there are 11 digits `1` for the squares of numbers between 0 and 25. */
+
+
+function nbDig(n, d) {
+  let digitCount = 0;
+  for( let k = 0;k <= n; k++){
+    let x = k*k
+    let y = x.toString().split('');
+    y.forEach((s)=>s==d?digitCount++:null)
+  }
+  return digitCount;
+}
+
+nbDig(4,1);
